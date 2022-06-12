@@ -1,0 +1,21 @@
+// utils styles
+@import './utils/vars';
+
+// base styles
+@import './base/common';
+@import './base/reset';
+@import './base/container';
+
+// components 
+
+@import './components/logo';
+@import './components/header';
+@import './components/hero';
+@import './components/advantages';
+@import './components/deals';
+@import './components/team';
+@import './components/social-list';
+@import './components/clients';
+@import './components/footer';
+@import './components/filters';
+@import './components/modal';

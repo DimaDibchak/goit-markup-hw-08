@@ -1,0 +1,65 @@
+body {
+    color: $additional-color;
+    background-color: $white-color;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+}
+
+.seaction {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.seaction--nopadding {
+    padding-top: 0;
+}
+
+.seaction--another-bgc {
+    background-color: $background-additionalcolor;
+}
+.seaction__title {
+    color: $main-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.seaction__title--hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.button {
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+    border-radius: 4px;
+    border:0;
+    padding: 6px 22px;
+    min-height: 38px;
+}
+
+
+.box-hidden  {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+}
