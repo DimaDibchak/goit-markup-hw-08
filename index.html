@@ -12,9 +12,9 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header__container">   
+        <div class="container header__container"> 
+            <a href="./index.html" class="logo header__logo" lang="en"><span class="logo__accent">Web</span>Studio</a>
             <nav class="nav">
-                <a href="./index.html" class="logo header__logo" lang="en"><span class="logo__accent">Web</span>Studio</a>
                 <ul class = "nav__list">
                     <li class="nav__item"><a href="./index.html" class="nav__link nav__link--current">Студия</a></li>
                     <li class="nav__item"><a href="./portfolio.html" class="nav__link">Портфолио</a></li>
@@ -24,20 +24,25 @@
             <ul class = "contacts"> 
                 <li class="contacts__item">
                     <a href="mailto:info@devstudio.com" class="contacts__link">
-                    <svg class="contacts__icon" width="16" height="12">
+                    <svg class="contacts__icon contacts__icon--letter" width="16" height="12">
                         <use href="./images/sprite.svg#icon-envelope"></use>
                     </svg>
                     info@devstudio.com
                 </a>
             </li>
                 <li class="contacts__item"><a href="tel:+380961111111" class="contacts__link">
-                    <svg  class="contacts__icon" width="10" height="16">
+                    <svg  class="contacts__icon contacts__icon--tele" width="10" height="16">
                         <use href="./images/sprite.svg#icon-smartphone"></use>
                     </svg>
                     +38 096 111 11 11
                 </a>
                 </li>
             </ul> 
+            <button class="modal-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="modal-btn__icon" width="24" height="16">
+                    <use href="./images/sprite.svg#icon-menu"></use>
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -96,37 +101,100 @@
     </section>
 
 <!-- Чем мы занимаемся -->
-    <section class="seaction seaction--nopadding"> 
+    <section class="seaction seaction--nopadding reviews"> 
         <div class="container">
             <h2 class="seaction__title">Чем мы занимаемся </h2>
         <ul class ="deals">
             <li class = "deals__item">
-                     <img
-                    src="./images/img_1.jpg"
-                    alt="programer-working-his-desk-office"
-                    width="370"
+                <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/about-us/img_1.webp    1x,
+                        ./images/about-us/img_1@2x.webp 2x
+                      "
+                      type="image/webp"
                     />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                      ./images/about-us/img_1.jpg    1x,
+                      ./images/about-us/img_1@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="services__img"
+                      src="./images/about-us/img_1.jpg"
+                      alt="Розробка сайтів"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                         <p class="deals__description">
                             Десктопные приложения
                         </p>
-                           </li>
+            </li>
 
             <li class = "deals__item">
-                    <img
-                    src="./images/img_2.jpg"
-                    alt="programer-working-his-desk-office"
-                    width="370"
+                <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/about-us/img_2.webp    1x,
+                        ./images/about-us/img_2@2x.webp 2x
+                      "
+                      type="image/webp"
                     />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                      ./images/about-us/img_2.jpg    1x,
+                      ./images/about-us/img_2@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="services__img"
+                      src="./images/about-us/img_2.jpg"
+                      alt="Розробка мобільних додатків"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                         <p class="deals__description">
                             Мобильные приложения
                         </p>
-
+            </li>
             <li class = "deals__item">
-                        <img
-                        src="./images/img_3.jpg"
-                        alt="programer-working-his-desk-office"
-                        width="370"
-                        />
+                <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/about-us/img_3.webp    1x,
+                        ./images/about-us/img_3@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                      ./images/about-us/img_3.jpg    1x,
+                      ./images/about-us/img_3@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="services__img"
+                      src="./images/about-us/img_3.jpg"
+                      alt="Графічний дизайн"
+                      width="370"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                             <p class="deals__description">
                                 Дизайнерские решения
                             </p>
@@ -136,16 +204,73 @@
     </section>
 
 <!-- Наша команда -->
-    <section class="seaction seaction--another-bgc"> 
+    <section class="seaction seaction--another-bgc "> 
        <div class="container">
         <h2 class="seaction__title">Наша команда </h2>
         <ul class = "team">
             <li class="team__item">
-                <img
-                src="./images/img_1_1.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                />
+                <picture>
+                    <!-- for desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/team/img_1_1d.webp 1x,
+                        ./images/team/img_1_1d@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                      ./images/team/img_1_1d.jpg 1x,
+                      ./images/team/img_1_1d@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- for tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                      ./images/team/img_1_1t.webp 1x,
+                      ./images/team/img_1_1t@2x.webp 2x
+                    "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                      ./images/team/img_1_1t.jpg 1x,
+                      ./images/team/img_1_1t@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- for mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                      ./images/team/img_1_1m.webp 1x,
+                      ./images/team/img_1_1m@2x.webp 2x
+                    "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                      ./images/team/img_1_1m.jpg 1x,
+                      ./images/team/img_1_1m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- default device type -->
+                    <img
+                      class="team__img"
+                      src="./images/team/img_1_1m.jpg"
+                      alt="Игорь Демьяненко"
+                      width="450"
+                      height="460"
+                      loading="lazy"
+                    />
+                  </picture>
                 <div class="team__description">
                     <h3 class="team__name">Игорь Демьяненко</h3>
                     <p class="team__position" lang="en">Product Designer</p>
@@ -183,11 +308,69 @@
             </li>
 
             <li class="team__item">
-                <img
-                src="./images/img_1_2.jpg"
-                alt="Ольга Репина"
-                width="270"
-                />
+                <picture>
+                    <!-- for desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/team/img_1_2d.webp 1x,
+                        ./images/team/img_1_2d@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                      ./images/team/img_1_2d.jpg 1x,
+                      ./images/team/img_1_2d@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- for tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                      ./images/team/img_1_2t.webp 1x,
+                      ./images/team/img_1_2t@2x.webp 2x
+                    "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                      ./images/team/img_1_2t.jpg 1x,
+                      ./images/team/img_1_2t@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- for mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                      ./images/team/img_1_2m.webp 1x,
+                      ./images/team/img_1_2m@2x.webp 2x
+                    "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                      ./images/team/img_1_2m.jpg 1x,
+                      ./images/team/img_1_2m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- default device type -->
+                    <img
+                      class="team__img"
+                      src="./images/team/img_1_2m.jpg"
+                      alt="Ольга Репина"
+                      width="450"
+                      height="460"
+                      loading="lazy"
+                    />
+                  </picture>
+                
                <div class="team__description">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__position" lang="en">Frontend Developer</p>
@@ -225,11 +408,69 @@
             </li>
             
             <li class="team__item">
-                <img
-                src="./images/img_1_3.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                />
+                <picture>
+                    <!-- for desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/team/img_1_3d.webp 1x,
+                        ./images/team/img_1_3d@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                      ./images/team/img_1_3d.jpg 1x,
+                      ./images/team/img_1_3d@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- for tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                      ./images/team/img_1_3t.webp 1x,
+                      ./images/team/img_1_3t@2x.webp 2x
+                    "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                      ./images/team/img_1_3t.jpg 1x,
+                      ./images/team/img_1_3t@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- for mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                      ./images/team/img_1_3m.webp 1x,
+                      ./images/team/img_1_3m@2x.webp 2x
+                    "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                      ./images/team/img_1_3m.jpg 1x,
+                      ./images/team/img_1_3m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- default device type -->
+                    <img
+                      class="team__img"
+                      src="./images/team/img_1_2m.jpg"
+                      alt="Николай Тарасов"
+                      width="450"
+                      height="460"
+                      loading="lazy"
+                    />
+                  </picture>
+                
                 <div class="team__description">
                     <h3 class="team__name">Николай Тарасов</h3>
                     <p class="team__position" lang="en">Marketing</p>
@@ -267,11 +508,69 @@
             </li>
 
             <li class="team__item"> 
-                <img
-                src="./images/img_1_4.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                />
+                <picture>
+                    <!-- for desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/team/img_1_4d.webp 1x,
+                        ./images/team/img_1_4d@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                      ./images/team/img_1_4d.jpg 1x,
+                      ./images/team/img_1_4d@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- for tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                      ./images/team/img_1_4t.webp 1x,
+                      ./images/team/img_1_4t@2x.webp 2x
+                    "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                      ./images/team/img_1_4t.jpg 1x,
+                      ./images/team/img_1_4t@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- for mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                      ./images/team/img_1_4m.webp 1x,
+                      ./images/team/img_1_4m@2x.webp 2x
+                    "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                      ./images/team/img_1_4m.jpg 1x,
+                      ./images/team/img_1_4m@2x.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <!-- default device type -->
+                    <img
+                      class="team__img"
+                      src="./images/team/img_1_2m.jpg"
+                      alt="Михаил Ермаков"
+                      width="450"
+                      height="460"
+                      loading="lazy"
+                    />
+                  </picture>
+                
                 <div class="team__description">
                     <h3 class="team__name">Михаил Ермаков</h3>
                     <p class="team__position" lang="en">UI Designer</p>
@@ -365,7 +664,7 @@
     </section>
 
     </main>
-
+    
     <footer class="footer">
         <div class="container footer__container">
             <div class="footer__contacts">
@@ -377,7 +676,7 @@
             <li class="address__item"><a href="tel:+380961111111" class="adress__link--contact">+38 096 111 11 11</a></li>
             </ul>
         </address>
-       </div>
+            </div>
 
          <div class="footer__networks">
              <p class="networks-title">Присоединяйтесь</p>
@@ -496,6 +795,61 @@
 
     </div>
 
-    <script src="./js/modal.js"></script>
+    <!-- мобільне меню -->
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+
+        <button class="mobile-menu__button js-close-menu" type="button"> 
+            <svg width="18.67" height="18.67">
+                <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <ul class = "mobile-menu__nav">
+            <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__nav-link mobile-menu__nav-link--current">Студия</a></li>
+            <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__nav-link">Портфолио</a></li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__nav-link">Контакты</a></li>
+        </ul>
+        <ul class = "mobile-menu__contacts"> 
+            <li class="mobile-menu__item">
+                <a href="tel:+380961111111" class="mobile-menu__number">
+                +38 096 111 11 11
+            </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="mailto:info@devstudio.com" class="mobile-menu__mail">
+                info@devstudio.com
+            </a>
+        </li>
+        </ul>
+        
+        <ul class = "mobile-menu__social">
+            <li class="mobile-menu__social--item">
+                <a href="./index.html" class="mobile-menu__social-link " lang="en">Instagram</a>
+            
+            </li>
+            <li class="mobile-menu__social--item">
+                <a href="./portfolio.html" class="mobile-menu__social-link" lang="en">Twitter</a>
+            
+            </li>
+            <li class="mobile-menu__social--item">
+                <a href="" class="mobile-menu__social-link" lang="en">Facebook</a>
+            
+            </li>
+            <li class="mobile-menu__social--item">
+                <a href="" class="mobile-menu__social-link" lang="en">LinkedIn</a>
+            
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<script
+defer
+src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+crossorigin="anonymous"
+></script>
+<script defer src="js/mobile-menu.js"></script>
+<script src="./js/modal.js"></script>
 </body>
 </html>

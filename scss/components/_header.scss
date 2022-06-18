@@ -3,32 +3,51 @@
     border-bottom: 1px solid #ECECEC;
 
     &__logo {
-        padding-top: 24px;
-        padding-bottom: 24px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        
+        @media screen and (min-width:768px) {
+            padding-top: 26px;
+            padding-bottom: 26px;
+            margin-right: 88px;
+        }
+
+        @media screen and (min-width:1200px) {
+            padding-top: 24px;
+            padding-bottom: 25px;
+            
+        }
+    }
+}
+
+
+.header__container {
+    display:flex;
+    align-items: center;
+}
+
+
+.header__container {
+
+    @media screen and (max-width:767px) {
+        width: 480px;  
+    }
+}
+
+.nav  {
+
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
     }
 }
 
 .nav__item:not(:last-child) {
     margin-right: 50px;
 }
-
-.contacts {
-    margin-left: auto;
-
-    &__item:not(:last-child) {
-        margin-right: 30px;
-    }
-}
-
-
-.header__container,
-.nav,
-.nav__list,
-.contacts {
-    display:flex;
-    align-items: center;
-}
-
 
 
 .nav__link {
@@ -51,35 +70,6 @@
     }
 }
 
-
-.contacts__link {
-    color: $additional-color;
-
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    transition:
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:focus,
-    &:hover {
-        color: $accent-color;
-    }
-}
-
-
-.contacts__icon {
-    margin-right: 10px;
-    fill: currentColor;
-}
-
-
-
 .nav__link--current {
     position: relative;
     color: $accent-color;
@@ -98,3 +88,109 @@
     }
 
 }
+
+
+
+
+.contacts {
+
+    margin-left: auto;
+    &__item {
+        align-items: flex-start;
+        
+    }
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        &__item:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media screen and (min-width:1200px)  {
+        display: flex;
+        align-items: center;
+        &__item:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    
+}
+
+
+.contacts__link {
+    color: $additional-color;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+
+    display: flex;
+    align-items: center;
+
+
+    transition:
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus,
+    &:hover {
+        color: $accent-color;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+        line-height: 1.14;
+    }
+}
+
+.contacts__icon {
+    margin-right: 8px;
+    fill: currentColor;
+
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .contacts__icon--letter {
+        width: 14px;
+        height: 10px;
+    }
+
+    .contacts__icon--tele {
+        width: 10px;
+        height: 14px;
+    }
+}
+
+
+.modal-btn {
+    
+    display: inline-block;
+    margin-left: auto;
+    
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+
+    &:hover .modal-btn__icon,
+    &:focus .modal-btn__icon {
+        fill: $accent-color;
+    }
+
+    @media screen and (min-width:768px) {
+        display: none;
+    } 
+}
+
+
+
+  .modal-btn__icon {
+    transition:
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }

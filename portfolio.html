@@ -12,9 +12,9 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header__container">   
+        <div class="container header__container"> 
+            <a href="./index.html" class="logo header__logo" lang="en"><span class="logo__accent">Web</span>Studio</a>
             <nav class="nav">
-                <a href="./index.html" class="logo header__logo" lang="en"><span class="logo__accent">Web</span>Studio</a>
                 <ul class = "nav__list">
                     <li class="nav__item"><a href="./index.html" class="nav__link ">Студия</a></li>
                     <li class="nav__item"><a href="./portfolio.html" class="nav__link nav__link--current">Портфолио</a></li>
@@ -24,20 +24,25 @@
             <ul class = "contacts"> 
                 <li class="contacts__item">
                     <a href="mailto:info@devstudio.com" class="contacts__link">
-                    <svg class="contacts__icon" width="16" height="12">
+                    <svg class="contacts__icon contacts__icon--letter" width="16" height="12">
                         <use href="./images/sprite.svg#icon-envelope"></use>
                     </svg>
                     info@devstudio.com
                 </a>
             </li>
                 <li class="contacts__item"><a href="tel:+380961111111" class="contacts__link">
-                    <svg  class="contacts__icon" width="10" height="16">
+                    <svg  class="contacts__icon contacts__icon--tele" width="10" height="16">
                         <use href="./images/sprite.svg#icon-smartphone"></use>
                     </svg>
                     +38 096 111 11 11
                 </a>
                 </li>
             </ul> 
+            <button class="modal-btn js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="modal-btn__icon" width="24" height="16">
+                    <use href="./images/sprite.svg#icon-menu"></use>
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -56,11 +61,68 @@
                  <li class="examples-list__item">
                    <a href="" class="examples-list__link">
                    <div class="examples-list__thumb">
-                    <img
-                    src="./images/img2_1.jpg"
-                    alt="Ноутбук-с-открытым-сайтом"
-                    width="370"
-                    />
+                    <picture>
+                        <!-- for desktop -->
+                        <source
+                          media="(min-width: 1200px)"
+                          srcset="
+                            ./images/filters/img_1d.webp 1x,
+                            ./images/filters/img_1d@2x.webp 2x
+                          "
+                          type="image/webp"
+                        />
+                        <source
+                          media="(min-width: 1200px)"
+                          srcset="
+                          ./images/filters/img_1d.jpg 1x,
+                          ./images/filters/img_1d@2x.jpg 2x
+                          "
+                          type="image/jpg"
+                        />
+                        <!-- for tablet -->
+                        <source
+                          media="(min-width: 768px)"
+                          srcset="
+                          ./images/filters/img_1t.webp 1x,
+                            ./images/filters/img_1t@2x.webp 2x
+                          "
+                          type="image/webp"
+                        />
+                        <source
+                          media="(min-width: 768px)"
+                          srcset="
+                          ./images/filters/img_1t.jpg 1x,
+                          ./images/filters/img_1t@2x.jpg 2x
+                          "
+                          type="image/jpg"
+                        />
+                        <!-- for mobile -->
+                        <source
+                          media="(max-width: 767px)"
+                          srcset="
+                          ./images/filters/img_1m.webp 1x,
+                          ./images/filters/img_1m@2x.webp 2x
+                        "
+                          type="image/webp"
+                        />
+                        <source
+                          media="(max-width: 767px)"
+                          srcset="
+                          ./images/filters/img_1m.jpg 1x,
+                          ./images/filters/img_1m@2x.jpg 2x
+                          "
+                          type="image/jpg"
+                        />
+                        <!-- default device type -->
+                        <img
+                          class="team__img"
+                          src="./images/filters/img_1m.jpg"
+                          alt="Ноутбук-с-открытым-сайтом"
+                          width="450"
+                        height="294"
+                        loading="lazy"
+                        />
+                      </picture>
                     <div class="examples-list__hover">
                         <p class="examples-list__hover-description">
                             Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -76,11 +138,68 @@
                 <li class="examples-list__item">
                     <a href="" class="examples-list__link">
                         <div class="examples-list__thumb">
-                            <img
-                            src="./images/img2_2.jpg"
-                            alt="Басскетболист-ставит-блок-другому-игроку"
-                            width="370"
-                            />
+                            <picture>
+                                <!-- for desktop -->
+                                <source
+                                  media="(min-width: 1200px)"
+                                  srcset="
+                                    ./images/filters/img_2d.webp 1x,
+                                    ./images/filters/img_2d@2x.webp 2x
+                                  "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(min-width: 1200px)"
+                                  srcset="
+                                  ./images/filters/img_2d.jpg 1x,
+                                  ./images/filters/img_2d@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- for tablet -->
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="
+                                  ./images/filters/img_2t.webp 1x,
+                                    ./images/filters/img_2t@2x.webp 2x
+                                  "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="
+                                  ./images/filters/img_2t.jpg 1x,
+                                  ./images/filters/img_2t@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- for mobile -->
+                                <source
+                                  media="(max-width: 767px)"
+                                  srcset="
+                                  ./images/filters/img_2m.webp 1x,
+                                  ./images/filters/img_2m@2x.webp 2x
+                                "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(max-width: 767px)"
+                                  srcset="
+                                  ./images/filters/img_2m.jpg 1x,
+                                  ./images/filters/img_2m@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- default device type -->
+                                <img
+                                  class="team__img"
+                                  src="./images/filters/img_2m.jpg"
+                                  alt="Басскетболист-ставит-блок-другому-игроку"
+                                  width="450"
+                                height="294"
+                                loading="lazy"
+                                />
+                            </picture>
                             <div class="examples-list__hover">
                                 <p class="examples-list__hover-description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -96,11 +215,68 @@
                 <li class="examples-list__item">
                     <a href="" class="examples-list__link">
                         <div class="examples-list__thumb">
-                            <img
-                    src="./images/img2_3.jpg"
-                    alt="Лого-Seafood-на-фоне-рыбы"
-                    width="370"
-                    />
+                            <picture>
+                                <!-- for desktop -->
+                                <source
+                                  media="(min-width: 1200px)"
+                                  srcset="
+                                    ./images/filters/img_3d.webp 1x,
+                                    ./images/filters/img_3d@2x.webp 2x
+                                  "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(min-width: 1200px)"
+                                  srcset="
+                                  ./images/filters/img_3d.jpg 1x,
+                                  ./images/filters/img_3d@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- for tablet -->
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="
+                                  ./images/filters/img_3t.webp 1x,
+                                    ./images/filters/img_3t@2x.webp 2x
+                                  "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="
+                                  ./images/filters/img_3t.jpg 1x,
+                                  ./images/filters/img_3t@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- for mobile -->
+                                <source
+                                  media="(max-width: 767px)"
+                                  srcset="
+                                  ./images/filters/img_3m.webp 1x,
+                                  ./images/filters/img_3m@2x.webp 2x
+                                "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(max-width: 767px)"
+                                  srcset="
+                                  ./images/filters/img_3m.jpg 1x,
+                                  ./images/filters/img_3m@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- default device type -->
+                                <img
+                                  class="team__img"
+                                  src="./images/filters/img_3m.jpg"
+                                  alt="Лого-Seafood-на-фоне-рыбы"
+                                  width="450"
+                                height="294"
+                                loading="lazy"
+                                />
+                            </picture>
                             <div class="examples-list__hover">
                                 <p class="examples-list__hover-description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -117,11 +293,68 @@
                 <li class="examples-list__item">
                     <a href="" class="examples-list__link">
                         <div class="examples-list__thumb">
-                            <img
-                            src="./images/img2_4.jpg"
-                            alt="черные-наушники"
-                            width="370"
-                            />
+                            <picture>
+                                <!-- for desktop -->
+                                <source
+                                  media="(min-width: 1200px)"
+                                  srcset="
+                                    ./images/filters/img_4d.webp 1x,
+                                    ./images/filters/img_4d@2x.webp 2x
+                                  "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(min-width: 1200px)"
+                                  srcset="
+                                  ./images/filters/img_4d.jpg 1x,
+                                  ./images/filters/img_4d@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- for tablet -->
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="
+                                  ./images/filters/img_4t.webp 1x,
+                                    ./images/filters/img_4t@2x.webp 2x
+                                  "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="
+                                  ./images/filters/img_4t.jpg 1x,
+                                  ./images/filters/img_4t@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- for mobile -->
+                                <source
+                                  media="(max-width: 767px)"
+                                  srcset="
+                                  ./images/filters/img_4m.webp 1x,
+                                  ./images/filters/img_4m@2x.webp 2x
+                                "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(max-width: 767px)"
+                                  srcset="
+                                  ./images/filters/img_4m.jpg 1x,
+                                  ./images/filters/img_4m@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- default device type -->
+                                <img
+                                  class="team__img"
+                                  src="./images/filters/img_4m.jpg"
+                                  alt="черные-наушники"
+                                  width="450"
+                                height="294"
+                                loading="lazy"
+                                />
+                            </picture>
                             <div class="examples-list__hover">
                                 <p class="examples-list__hover-description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -138,11 +371,68 @@
                 <li class="examples-list__item">
                    <a href="" class="examples-list__link">
                     <div class="examples-list__thumb">
-                        <img
-                        src="./images/img2_5.jpg"
-                        alt="белая-и-коричневая-коробка"
-                        width="370"
-                        />
+                        <picture>
+                            <!-- for desktop -->
+                            <source
+                              media="(min-width: 1200px)"
+                              srcset="
+                                ./images/filters/img_5d.webp 1x,
+                                ./images/filters/img_5d@2x.webp 2x
+                              "
+                              type="image/webp"
+                            />
+                            <source
+                              media="(min-width: 1200px)"
+                              srcset="
+                              ./images/filters/img_5d.jpg 1x,
+                              ./images/filters/img_5d@2x.jpg 2x
+                              "
+                              type="image/jpg"
+                            />
+                            <!-- for tablet -->
+                            <source
+                              media="(min-width: 768px)"
+                              srcset="
+                              ./images/filters/img_5t.webp 1x,
+                                ./images/filters/img_5t@2x.webp 2x
+                              "
+                              type="image/webp"
+                            />
+                            <source
+                              media="(min-width: 768px)"
+                              srcset="
+                              ./images/filters/img_5t.jpg 1x,
+                              ./images/filters/img_5t@2x.jpg 2x
+                              "
+                              type="image/jpg"
+                            />
+                            <!-- for mobile -->
+                            <source
+                              media="(max-width: 767px)"
+                              srcset="
+                              ./images/filters/img_5m.webp 1x,
+                              ./images/filters/img_5m@2x.webp 2x
+                            "
+                              type="image/webp"
+                            />
+                            <source
+                              media="(max-width: 767px)"
+                              srcset="
+                              ./images/filters/img_5m.jpg 1x,
+                              ./images/filters/img_5m@2x.jpg 2x
+                              "
+                              type="image/jpg"
+                            />
+                            <!-- default device type -->
+                            <img
+                              class="team__img"
+                              src="./images/filters/img_5m.jpg"
+                              alt="белая-и-коричневая-коробка"
+                              width="450"
+                            height="294"
+                            loading="lazy"
+                            />
+                        </picture>
                         <div class="examples-list__hover">
                             <p class="examples-list__hover-description">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -159,11 +449,68 @@
                 <li class="examples-list__item">
                    <a href="" class="examples-list__link">
                     <div class="examples-list__thumb">
-                        <img
-                        src="./images/img2_6.jpg"
-                        alt="монитор-с-картой-мира"
-                        width="370"
-                        />
+                        <picture>
+                            <!-- for desktop -->
+                            <source
+                              media="(min-width: 1200px)"
+                              srcset="
+                                ./images/filters/img_6d.webp 1x,
+                                ./images/filters/img_6d@2x.webp 2x
+                              "
+                              type="image/webp"
+                            />
+                            <source
+                              media="(min-width: 1200px)"
+                              srcset="
+                              ./images/filters/img_6d.jpg 1x,
+                              ./images/filters/img_6d@2x.jpg 2x
+                              "
+                              type="image/jpg"
+                            />
+                            <!-- for tablet -->
+                            <source
+                              media="(min-width: 768px)"
+                              srcset="
+                              ./images/filters/img_6t.webp 1x,
+                                ./images/filters/img_6t@2x.webp 2x
+                              "
+                              type="image/webp"
+                            />
+                            <source
+                              media="(min-width: 768px)"
+                              srcset="
+                              ./images/filters/img_6t.jpg 1x,
+                              ./images/filters/img_6t@2x.jpg 2x
+                              "
+                              type="image/jpg"
+                            />
+                            <!-- for mobile -->
+                            <source
+                              media="(max-width: 767px)"
+                              srcset="
+                              ./images/filters/img_6m.webp 1x,
+                              ./images/filters/img_6m@2x.webp 2x
+                            "
+                              type="image/webp"
+                            />
+                            <source
+                              media="(max-width: 767px)"
+                              srcset="
+                              ./images/filters/img_6m.jpg 1x,
+                              ./images/filters/img_6m@2x.jpg 2x
+                              "
+                              type="image/jpg"
+                            />
+                            <!-- default device type -->
+                            <img
+                              class="team__img"
+                              src="./images/filters/img_6m.jpg"
+                              alt="монитор-с-картой-мира"
+                              width="450"
+                            height="294"
+                            loading="lazy"
+                            />
+                        </picture>
                         <div class="examples-list__hover">
                             <p class="examples-list__hover-description">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -179,11 +526,68 @@
                 <li class="examples-list__item">
                     <a href="" class="examples-list__link">
                         <div class="examples-list__thumb">
-                            <img
-                            src="./images/img2_7.jpg"
-                            alt="разворот-журнала-с-девушками-на-картинке"
-                            width="370"
-                            />
+                            <picture>
+                                <!-- for desktop -->
+                                <source
+                                  media="(min-width: 1200px)"
+                                  srcset="
+                                    ./images/filters/img_7d.webp 1x,
+                                    ./images/filters/img_7d@2x.webp 2x
+                                  "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(min-width: 1200px)"
+                                  srcset="
+                                  ./images/filters/img_7d.jpg 1x,
+                                  ./images/filters/img_7d@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- for tablet -->
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="
+                                  ./images/filters/img_7t.webp 1x,
+                                    ./images/filters/img_7t@2x.webp 2x
+                                  "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="
+                                  ./images/filters/img_7t.jpg 1x,
+                                  ./images/filters/img_7t@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- for mobile -->
+                                <source
+                                  media="(max-width: 767px)"
+                                  srcset="
+                                  ./images/filters/img_7m.webp 1x,
+                                  ./images/filters/img_7m@2x.webp 2x
+                                "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(max-width: 767px)"
+                                  srcset="
+                                  ./images/filters/img_7m.jpg 1x,
+                                  ./images/filters/img_7m@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- default device type -->
+                                <img
+                                  class="team__img"
+                                  src="./images/filters/img_7m.jpg"
+                                  alt="разворот-журнала-с-девушками-на-картинке"
+                                  width="450"
+                                height="294"
+                                loading="lazy"
+                                />
+                            </picture>
                             <div class="examples-list__hover">
                                 <p class="examples-list__hover-description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -200,11 +604,68 @@
                 <li class="examples-list__item">
                         <a href="" class="examples-list__link">
                             <div class="examples-list__thumb">
-                                <img
-                    src="./images/img2_8.jpg"
-                    alt="бирка-с-надписью-label-tag"
-                    width="370"
-                    />
+                                <picture>
+                                    <!-- for desktop -->
+                                    <source
+                                      media="(min-width: 1200px)"
+                                      srcset="
+                                        ./images/filters/img_8d.webp 1x,
+                                        ./images/filters/img_8d@2x.webp 2x
+                                      "
+                                      type="image/webp"
+                                    />
+                                    <source
+                                      media="(min-width: 1200px)"
+                                      srcset="
+                                      ./images/filters/img_8d.jpg 1x,
+                                      ./images/filters/img_8d@2x.jpg 2x
+                                      "
+                                      type="image/jpg"
+                                    />
+                                    <!-- for tablet -->
+                                    <source
+                                      media="(min-width: 768px)"
+                                      srcset="
+                                      ./images/filters/img_8t.webp 1x,
+                                        ./images/filters/img_8t@2x.webp 2x
+                                      "
+                                      type="image/webp"
+                                    />
+                                    <source
+                                      media="(min-width: 768px)"
+                                      srcset="
+                                      ./images/filters/img_8t.jpg 1x,
+                                      ./images/filters/img_8t@2x.jpg 2x
+                                      "
+                                      type="image/jpg"
+                                    />
+                                    <!-- for mobile -->
+                                    <source
+                                      media="(max-width: 767px)"
+                                      srcset="
+                                      ./images/filters/img_8m.webp 1x,
+                                      ./images/filters/img_8m@2x.webp 2x
+                                    "
+                                      type="image/webp"
+                                    />
+                                    <source
+                                      media="(max-width: 767px)"
+                                      srcset="
+                                      ./images/filters/img_8m.jpg 1x,
+                                      ./images/filters/img_8m@2x.jpg 2x
+                                      "
+                                      type="image/jpg"
+                                    />
+                                    <!-- default device type -->
+                                    <img
+                                      class="team__img"
+                                      src="./images/filters/img_8m.jpg"
+                                      alt="бирка-с-надписью-label-tag"
+                                      width="450"
+                                    height="294"
+                                    loading="lazy"
+                                    />
+                                </picture>
                                 <div class= "examples-list__hover">
                                     <p class="examples-list__hover-description">
                                         Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -221,11 +682,68 @@
                 <li class="examples-list__item">
                     <a href="" class="examples-list__link">
                         <div class="examples-list__thumb">
-                            <img
-                    src="./images/img2_9.jpg"
-                    alt="человек-работает-за-наутбуком"
-                    width="370"
-                    />
+                            <picture>
+                                <!-- for desktop -->
+                                <source
+                                  media="(min-width: 1200px)"
+                                  srcset="
+                                    ./images/filters/img_9d.webp 1x,
+                                    ./images/filters/img_9d@2x.webp 2x
+                                  "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(min-width: 1200px)"
+                                  srcset="
+                                  ./images/filters/img_9d.jpg 1x,
+                                  ./images/filters/img_9d@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- for tablet -->
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="
+                                  ./images/filters/img_9t.webp 1x,
+                                    ./images/filters/img_9t@2x.webp 2x
+                                  "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(min-width: 768px)"
+                                  srcset="
+                                  ./images/filters/img_9t.jpg 1x,
+                                  ./images/filters/img_9t@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- for mobile -->
+                                <source
+                                  media="(max-width: 767px)"
+                                  srcset="
+                                  ./images/filters/img_9m.webp 1x,
+                                  ./images/filters/img_9m@2x.webp 2x
+                                "
+                                  type="image/webp"
+                                />
+                                <source
+                                  media="(max-width: 767px)"
+                                  srcset="
+                                  ./images/filters/img_9m.jpg 1x,
+                                  ./images/filters/img_9m@2x.jpg 2x
+                                  "
+                                  type="image/jpg"
+                                />
+                                <!-- default device type -->
+                                <img
+                                  class="team__img"
+                                  src="./images/filters/img_9m.jpg"
+                                  alt="человек-работает-за-наутбуком"
+                                  width="450"
+                                height="294"
+                                loading="lazy"
+                                />
+                            </picture>
                             <div class="examples-list__hover">
                                 <p class="examples-list__hover-description">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -254,7 +772,7 @@
             <li class="address__item"><a href="tel:+380961111111" class="adress__link--contact">+38 096 111 11 11</a></li>
             </ul>
         </address>
-       </div>
+            </div>
 
          <div class="footer__networks">
              <p class="networks-title">Присоединяйтесь</p>
@@ -300,17 +818,69 @@
                     </span>
                         <svg width="24px" height="24px">
                             <use href="./images/sprite.svg#icon-send"> </use>
-                        </svg>
+                    </svg>  
                 </button> 
-            </div> 
-             </form>
-         </div>
-
+            </div>
+        </form>
+    </div>
     </footer>
 
 
 
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
 
+        <button class="mobile-menu__button js-close-menu" type="button"> 
+            <svg width="18.67" height="18.67">
+                <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <ul class = "mobile-menu__nav">
+            <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__nav-link ">Студия</a></li>
+            <li class="mobile-menu__item"><a href="./portfolio.html" class="mobile-menu__nav-link mobile-menu__nav-link--current">Портфолио</a></li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__nav-link">Контакты</a></li>
+        </ul>
+        <ul class = "mobile-menu__contacts"> 
+            <li class="mobile-menu__item">
+                <a href="tel:+380961111111" class="mobile-menu__number">
+                +38 096 111 11 11
+            </a>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="mailto:info@devstudio.com" class="mobile-menu__mail">
+                info@devstudio.com
+            </a>
+        </li>
+        </ul>
+        
+        <ul class = "mobile-menu__social">
+            <li class="mobile-menu__social--item">
+                <a href="./index.html" class="mobile-menu__social-link " lang="en">Instagram</a>
+            
+            </li>
+            <li class="mobile-menu__social--item">
+                <a href="./portfolio.html" class="mobile-menu__social-link" lang="en">Twitter</a>
+            
+            </li>
+            <li class="mobile-menu__social--item">
+                <a href="" class="mobile-menu__social-link" lang="en">Facebook</a>
+            
+            </li>
+            <li class="mobile-menu__social--item">
+                <a href="" class="mobile-menu__social-link" lang="en">LinkedIn</a>
+            
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<script
+defer
+src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+crossorigin="anonymous"
+></script>
+<script defer src="js/mobile-menu.js"></script>
 
  
 </body>

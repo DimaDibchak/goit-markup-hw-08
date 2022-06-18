@@ -29,7 +29,10 @@
     left: 50%;
     transform: translate(-50%,-50%) scale(1);
 
-    min-width: 528px;
+    width: 450px;
+    @media screen and (min-width:1200px) {
+        width: 528px;
+    }
     padding: 40px;
     background-color: $white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -69,13 +72,17 @@
 .user-form__title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     color: $main-color;
     display: block;
 
-    margin-bottom: 12px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width:1200px) {
+        line-height: 1.15;
+    }
 }
 
 .user-form__item {
@@ -90,7 +97,7 @@
     display: block;
     margin-bottom: 4px;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 1.17;
     letter-spacing: 0.01em;
     cursor: pointer;
 }
@@ -174,8 +181,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 14px;
-        line-height: 1.71;
+        font-size: 12px;
+        line-height: 1.17;
+
+        @media screen and (min-width:1200px) {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        
     }
 }
 
@@ -233,7 +246,7 @@
     color: $white-color;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.875;
+    line-height: 1.88;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 
