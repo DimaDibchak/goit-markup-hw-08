@@ -32,7 +32,7 @@ body {
   font-size: 28px;
   line-height: 1.17;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -40,6 +40,7 @@ body {
 @media screen and (min-width: 1200px) {
   .seaction__title {
     font-size: 36px;
+    margin-bottom: 50px;
   }
 }
 
@@ -298,6 +299,18 @@ a {
     padding-bottom: 32px;
     font-size: 14px;
     line-height: 1.14;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__link--mail {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__link--tele {
+    padding-bottom: 15px;
   }
 }
 
@@ -809,6 +822,12 @@ a {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer__networks {
+    margin-right: auto;
+  }
+}
+
 .adress__link--location {
   color: #FFFFFF;
   font-style: normal;
@@ -858,12 +877,6 @@ a {
 
 .social-list__link--another-colors:hover, .social-list__link--another-colors:focus {
   background-color: #2196F3;
-}
-
-@media screen and (min-width: 1200px) {
-  .subscribe-form {
-    margin-left: auto;
-  }
 }
 
 .subscribe-form__title {
@@ -998,6 +1011,13 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters-list {
+    margin-bottom: 50px;
   }
 }
 
@@ -1149,6 +1169,12 @@ a {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .examples-list__hover {
+    overflow-y: auto;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -1530,6 +1556,13 @@ a {
   color: #2196F3;
 }
 
+@media screen and (max-width: 479px) {
+  .mobile-menu__number {
+    font-size: 24px;
+    line-height: 1.167;
+  }
+}
+
 .mobile-menu__mail {
   font-weight: 500;
   font-size: 24px;
@@ -1544,6 +1577,13 @@ a {
   display: flex;
 }
 
+@media screen and (max-width: 479px) {
+  .mobile-menu__social {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .mobile-menu__social-link {
   font-size: 18px;
   line-height: 1.22;
@@ -1555,6 +1595,12 @@ a {
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+@media screen and (max-width: 479px) {
+  .mobile-menu__social--item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .mobile-menu__button {

@@ -15,6 +15,11 @@
     }
     @media screen and (min-width:768px) {
         justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
     }
 }
 
@@ -159,6 +164,10 @@
 
     transition: 
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: 479px) {
+        overflow-y: auto;
+    }
 
     @media screen and (min-width: 480px) {
         padding-top: 77px;
